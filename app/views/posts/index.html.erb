@@ -6,10 +6,10 @@
   <thead>
     <tr>
       <th>Heading</th>
-      <th>Body</th>
-      <th>Price</th>
+      <th>Time Listed</th>
       <th>Neighborhood</th>
-      <th>External url</th>
+      <th>External Link</th>
+      <th>Rent</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,10 +18,10 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.heading %></td>
-        <td><%= post.body %></td>
+        <td><%= post.time_listed %></td>
+        <td><%= post.hood %></td>
+        <td><%= post.ext_link %></td>
         <td><%= post.price %></td>
-        <td><%= post.neighborhood %></td>
-        <td><%= post.external_url %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

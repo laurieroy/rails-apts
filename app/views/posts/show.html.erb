@@ -6,23 +6,23 @@
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @post.body %>
+  <strong>Time Listed:</strong>
+  <%= @post.time_listed %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @post.hood %>
+</p>
+
+<p>
+  <strong>External Link:</strong>
+  <%= @post.ext_link %>
 </p>
 
 <p>
   <strong>Price:</strong>
   <%= @post.price %>
-</p>
-
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @post.neighborhood %>
-</p>
-
-<p>
-  <strong>External url:</strong>
-  <%= @post.external_url %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
