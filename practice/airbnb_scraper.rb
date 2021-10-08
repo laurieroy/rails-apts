@@ -1,7 +1,7 @@
 # check robots.txt to see if scraping is allowed
 # https://www.airbnb.com/robots.txt	seems to allow it as of 10/6/21
 # https://nokogiri.org/#parsing-and-querying
-
+# this is a mess, was experimenting with it
 require 'open-uri'
 require 'nokogiri'
 require 'csv'
