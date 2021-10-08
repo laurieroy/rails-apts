@@ -1,15 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1>Posts</h1>
 
-<h1>Posts</h1>
-
-<table>
+<table class="table table-hover table-striped">
   <thead>
     <tr>
-      <th>Heading</th>
-      <th>Time Listed</th>
-      <th>Neighborhood</th>
-      <th>External Link</th>
-      <th>Rent</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Location</th>
+      <th scope="col">Rent</th>
+      <th scope="col">Last Updated</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,14 +15,13 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.heading %></td>
-        <td><%= post.time_listed %></td>
+        <th scope="row"><%= link_to post.heading, post %></th>
         <td><%= post.hood %></td>
-        <td><%= post.ext_link %></td>
-        <td><%= post.price %></td>
+        <td><%= number_to_currency(post.price, prescision: 0) %></td>
+        <td><%= "#{time_ago_in_words(Time.at(post.time_listed.to_i)) } ago" %></td>
         <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,3 +30,7 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+</div>
+
+

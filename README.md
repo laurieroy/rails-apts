@@ -13,5 +13,5 @@ This is my first scraping project, I scraped Craiglist for available apartments 
 
 Ruby 2.6.3 | Rails 6.1.4.1 | PG 13.2
 
-UI:
+UI: Bootstrap 5
 
